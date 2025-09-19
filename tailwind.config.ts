@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'heading': ['Montserrat', 'sans-serif'],
+        'body': ['Open Sans', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        starry: "hsl(var(--starry))",
+        'gradient-start': "hsl(var(--gradient-start))",
+        'gradient-mid': "hsl(var(--gradient-mid))",
+        'gradient-end': "hsl(var(--gradient-end))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +65,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      boxShadow: {
+        'luxury': 'var(--luxury-shadow)',
+        'luxury-lg': 'var(--luxury-shadow-lg)',
+      },
+      backgroundImage: {
+        'gradient-luxury': 'var(--gradient-luxury)',
+        'gradient-starry': 'var(--gradient-starry)',
+      },
+      transitionProperty: {
+        'luxury': 'var(--transition-luxury)',
       },
       borderRadius: {
         lg: "var(--radius)",
