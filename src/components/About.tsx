@@ -43,20 +43,12 @@ const About = () => {
             </h2>
             
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-muted-foreground font-body leading-relaxed mb-6">
-                I am a passionate technology professional with expertise spanning three critical areas of modern IT infrastructure.
-              </p>
-              
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-6">
-                As a <span className="text-primary font-semibold">Systems Administrator</span>, I design and maintain robust IT infrastructures that power businesses forward. My approach combines traditional system management with modern cloud technologies.
-              </p>
-              
-              <p className="text-lg text-muted-foreground font-body leading-relaxed mb-6">
-                In my role as a <span className="text-accent font-semibold">Web Developer</span>, I've architected and delivered 100+ websites using cutting-edge technologies. I specialize in creating scalable, responsive applications that provide exceptional user experiences.
-              </p>
-              
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                As a <span className="text-primary font-semibold">Cybersecurity Analyst</span>, I protect digital assets through comprehensive security monitoring, penetration testing, and SOC analysis. I believe security should be built into every layer of technology.
+                Detail-oriented professional with 3+ years managing IT infrastructure for 100+ websites 
+                and supporting end-users, emphasizing cybersecurity principles to enhance performance, 
+                reduce risks, and ensure compliance. Skilled in server management, threat detection, and 
+                incident response across on-premises and cloud environments. Proven in leading teams, 
+                streamlining operations, and minimizing downtime while supporting innovation.
               </p>
             </div>
 

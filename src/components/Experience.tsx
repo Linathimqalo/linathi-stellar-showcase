@@ -26,20 +26,34 @@ const Experience = () => {
     {
       icon: Server,
       title: 'Systems Administrator',
-      description: 'Managing servers, security protocols, and IT infrastructure with a focus on reliability and scalability. Implementing cloud solutions and maintaining 99.9% uptime across enterprise environments.',
-      technologies: ['Linux', 'Windows Server', 'AWS', 'Docker', 'Kubernetes', 'VMware'],
+      company: 'BeMySocial',
+      period: 'Feb 2024 – Present',
+      description: 'Managed 100+ websites, enforced least privilege access, SSL/DNS configurations, led 5-person team, boosted uptime to 97.9%, cut downtime by 30%, migrated servers for 73% productivity increase.',
+      technologies: ['Linux', 'Windows Server', 'SSL/DNS', 'Team Management', 'Server Migration'],
     },
     {
       icon: Code,
-      title: 'Web Developer',
-      description: 'Built and managed 100+ websites using modern development stacks. Specialized in full-stack development with emphasis on performance, accessibility, and user experience.',
-      technologies: ['React', 'Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'TypeScript'],
+      title: 'IT Support Technician',
+      company: 'IT Solutions',
+      period: 'Apr 2023 – Jan 2024',
+      description: 'Provided L2 support for 20+ clients, managed 60+ devices monthly, network troubleshooting, cut downtime by 40%, deployed endpoint monitoring across 12 branches.',
+      technologies: ['L2 Support', 'Network Troubleshooting', 'Endpoint Monitoring', 'Device Management'],
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity Analyst',
-      description: 'SIEM monitoring, penetration testing, and SOC analysis to protect digital assets. Implementing security frameworks and conducting vulnerability assessments.',
-      technologies: ['Splunk', 'Wireshark', 'Nmap', 'Metasploit', 'OWASP', 'ISO 27001'],
+      icon: Code,
+      title: 'Freelance Web Developer',
+      company: 'Self-Employed',
+      period: '2021 – 2022',
+      description: 'Built and optimized websites with React/WordPress/Shopify, improved security, boosted e-commerce cart value by 20%, enhanced UI/UX for mobile responsiveness.',
+      technologies: ['React', 'WordPress', 'Shopify', 'UI/UX', 'E-commerce'],
+    },
+    {
+      icon: Server,
+      title: 'LAN Administrator Intern',
+      company: 'Damelin College',
+      period: '2020',
+      description: 'Deployed LAN infrastructure, resolved system issues, performed malware scans, improved connectivity.',
+      technologies: ['LAN Infrastructure', 'System Administration', 'Malware Analysis', 'Connectivity'],
     },
   ];
 
@@ -75,9 +89,12 @@ const Experience = () => {
                     </div>
                     
                     <div className="flex-1">
-                      <h3 className="text-2xl font-heading font-bold mb-4 text-foreground">
+                      <h3 className="text-2xl font-heading font-bold mb-2 text-foreground">
                         {exp.title}
                       </h3>
+                      <div className="text-lg text-primary font-semibold mb-2">
+                        {exp.company} • {exp.period}
+                      </div>
                       
                       <p className="text-lg text-muted-foreground font-body leading-relaxed mb-6">
                         {exp.description}

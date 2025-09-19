@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <div className="text-2xl font-heading font-bold text-primary mb-2">LM</div>
             <p className="text-muted-foreground font-body">
-              Building the future, one secure solution at a time.
+              Building secure, scalable, and modern solutions.
             </p>
           </div>
           

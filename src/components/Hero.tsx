@@ -18,7 +18,23 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-starry opacity-5"></div>
+      <div className="absolute inset-0 bg-gradient-starry opacity-5 dark:opacity-20"></div>
+      
+      {/* Starry background for dark mode */}
+      <div className="absolute inset-0 dark:block hidden">
+        {[...Array(100)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'fade-in-up' : ''}`}>
@@ -39,7 +55,7 @@ const Hero = () => {
         
         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'fade-in-up' : ''}`}>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto font-body">
-            Building secure, scalable, and modern solutions that bridge the gap between robust infrastructure and cutting-edge development
+            Building secure, scalable, and modern solutions
           </p>
         </div>
         

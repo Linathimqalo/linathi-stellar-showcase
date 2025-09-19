@@ -25,40 +25,44 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Enterprise Security Dashboard',
-      description: 'Real-time cybersecurity monitoring dashboard with SIEM integration, threat intelligence feeds, and automated incident response workflows.',
-      techStack: ['React', 'Node.js', 'Elasticsearch', 'Splunk API', 'D3.js'],
+      title: 'TPOT Honeypot Deployment',
+      description: 'Deployed honeypots on Azure/GCP/Ubuntu platforms, successfully captured 441k+ attacks for threat intelligence analysis.',
+      techStack: ['Azure', 'GCP', 'Ubuntu', 'T-Pot', 'Threat Intelligence'],
       category: 'Cybersecurity',
+      github: 'https://github.com/Linathimqalo/tpot-honeypot',
+      demo: null,
     },
     {
-      title: 'Cloud Infrastructure Manager',
-      description: 'Comprehensive cloud resource management platform for multi-cloud environments with cost optimization and automated scaling capabilities.',
-      techStack: ['Python', 'AWS SDK', 'Terraform', 'Docker', 'PostgreSQL'],
-      category: 'Systems Administration',
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with modern payment integration, inventory management, and advanced analytics dashboard.',
-      techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe API'],
-      category: 'Web Development',
-    },
-    {
-      title: 'Network Security Scanner',
-      description: 'Automated vulnerability assessment tool with custom reporting, compliance checking, and integration with popular security frameworks.',
-      techStack: ['Python', 'Nmap', 'Flask', 'SQLite', 'OWASP ZAP'],
+      title: 'Zeus Malware Analysis',
+      description: 'Comprehensive static and dynamic malware analysis using FLAREVM and Kali Linux environments for cybersecurity research.',
+      techStack: ['FLAREVM', 'Kali Linux', 'Malware Analysis', 'Static Analysis', 'Dynamic Analysis'],
       category: 'Cybersecurity',
+      github: 'https://github.com/Linathimqalo/zeus-analysis',
+      demo: null,
     },
     {
-      title: 'DevOps Automation Suite',
-      description: 'Complete CI/CD pipeline automation with container orchestration, monitoring, and deployment strategies for enterprise applications.',
-      techStack: ['Jenkins', 'Kubernetes', 'Ansible', 'Prometheus', 'Grafana'],
+      title: 'SIEM/SOC Lab Environment',
+      description: 'Built comprehensive security lab with Wazuh, Security Onion, Splunk, and TheHive5. Implemented automated responses for 500+ log entries.',
+      techStack: ['Wazuh', 'Security Onion', 'Splunk', 'TheHive5', 'Automated Response'],
+      category: 'Cybersecurity',
+      github: null,
+      demo: null,
+    },
+    {
+      title: 'SharePoint Migration',
+      description: 'Led client migration to SharePoint environment, improving collaboration workflows and document management efficiency.',
+      techStack: ['SharePoint', 'Migration', 'Collaboration', 'Document Management'],
       category: 'Systems Administration',
+      github: null,
+      demo: null,
     },
     {
-      title: 'Portfolio Management App',
-      description: 'Modern web application for investment portfolio tracking with real-time market data, analytics, and risk assessment tools.',
-      techStack: ['Vue.js', 'FastAPI', 'Redis', 'WebSocket', 'Chart.js'],
-      category: 'Web Development',
+      title: 'Deloitte Cybersecurity Job Simulation',
+      description: 'Analyzed security breach logs and documented comprehensive findings for incident response and forensic investigation.',
+      techStack: ['Log Analysis', 'Incident Response', 'Forensics', 'Documentation'],
+      category: 'Cybersecurity',
+      github: null,
+      demo: null,
     },
   ];
 
@@ -122,14 +126,27 @@ const Projects = () => {
               </div>
               
               <div className="flex gap-3">
-                <Button variant="outline" size="sm" className="flex-1 btn-luxury-outline">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Live Demo
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1 btn-luxury-outline">
-                  <Github className="w-4 h-4 mr-2" />
-                  GitHub
-                </Button>
+                {project.demo && (
+                  <Button variant="outline" size="sm" className="flex-1 btn-luxury-outline" asChild>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+                {project.github && (
+                  <Button variant="outline" size="sm" className="flex-1 btn-luxury-outline" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
+                    </a>
+                  </Button>
+                )}
+                {!project.demo && !project.github && (
+                  <div className="flex-1 text-center text-sm text-muted-foreground py-2">
+                    Internal/Academic Project
+                  </div>
+                )}
               </div>
             </div>
           ))}
